@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
   req.log.info({message: 'Hello from Node.js Starter Application!'});
   res.send(
 
-    `<h1>Hello World from OpenShift NodeJS App in POD NAME: ${process.env.MY_NAME}</h1>`
+    `Hello ${process.env.MY_NAME} from OpenShift NodeJS App</h1>`
 
     );
 });
