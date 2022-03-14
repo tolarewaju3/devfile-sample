@@ -52,7 +52,11 @@ app.use(require('pino-http')({logger: pino}));
 app.get('/', (req, res) => {
   // Use req.log (a `pino` instance) to log JSON:
   req.log.info({message: 'Hello from Node.js Starter Application!'});
-  res.send('Hello from Node.js Starter Application! ${process.env.MY_NAME} ');
+  res.send(
+
+    `<h1>Hello World from OpenShift NodeJS App in POD NAME: ${process.env.MY_NAME}</h1>`
+
+    );
 });
 
 app.get('*', (req, res) => {
