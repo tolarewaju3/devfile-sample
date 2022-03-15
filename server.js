@@ -55,11 +55,13 @@ app.get('/', (req, res) => {
 
   var text = "";
 
-  for (let i = 0; i < 5; i++) {
-    text += "hi";
-  }
+  var env = process.env;
 
-  res.send(process.env);
+  Object.keys(env).forEach(function(key) {
+    text = text + key + '=' + env[key];
+  });
+
+  res.send(text);
 });
 
 app.get('*', (req, res) => {
