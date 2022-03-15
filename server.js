@@ -54,8 +54,8 @@ app.get('/', (req, res) => {
   req.log.info({message: 'Hello from Node.js Starter Application!'});
   res.send(
 
-    `<h1>Hello ${process.env.MY_NAME} from OpenShift NodeJS App</h1>`
-    `<h2>Environment Variable from Config Map: ${process.env.configMap}</h2>`
+    `<h1>Hello ${process.env.MY_NAME} from OpenShift NodeJS App</h1>\n
+    <h2>Environment Variable from Config Map: ${process.env.configMap}</h2>`
     
     );
 });
