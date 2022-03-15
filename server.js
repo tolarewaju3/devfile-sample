@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
   // Use req.log (a `pino` instance) to log JSON:
   req.log.info({message: 'Hello from Node.js Starter Application!'});
 
-  var text = "";
+  var text = "<h1>Environment Variables</h1>" + '<br>';
 
   var env = process.env;
 
