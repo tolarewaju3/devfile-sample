@@ -58,7 +58,9 @@ app.get('/', (req, res) => {
   var env = process.env;
 
   Object.keys(env).forEach(function(key) {
-    text = text + key + '=' + env[key] + '<br>';
+    if (!env[key]){
+        text = text + key + '=' + env[key] + '<br>';
+    }
   });
 
   res.send(text);
