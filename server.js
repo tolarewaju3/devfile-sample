@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
     text = text + key + '=' + env[key] + '\n';
   });
 
-  res.send(text);
+  res.send(process.env);
 });
 
 app.get('*', (req, res) => {
