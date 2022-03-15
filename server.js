@@ -52,12 +52,14 @@ app.use(require('pino-http')({logger: pino}));
 app.get('/', (req, res) => {
   // Use req.log (a `pino` instance) to log JSON:
   req.log.info({message: 'Hello from Node.js Starter Application!'});
-  res.send(
 
-    `<h1>Hello ${process.env.MY_NAME} from OpenShift NodeJS App</h1>\n
-    <h2>Environment Variable from Config Map: ${process.env.configMap}</h2>`
-    
-    );
+  var text = "";
+
+  for (let i = 0; i < 5; i++) {
+    text += "hi";
+  }
+
+  res.send(text);
 });
 
 app.get('*', (req, res) => {
