@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
     text += "hi";
   }
 
-  res.send(text);
+  res.send(process.env);
 });
 
 app.get('*', (req, res) => {
