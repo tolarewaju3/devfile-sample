@@ -58,7 +58,7 @@ app.get('/', (req, res) => {
   var env = process.env;
 
   Object.keys(env).forEach(function(key) {
-    if (env[key] && !key.startsWith('npm_')){
+    if (env[key] && !key.startsWith('npm')){
         text = text + key + '=' + env[key] + '<br>';
     }
   });
